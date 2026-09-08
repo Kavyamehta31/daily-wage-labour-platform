@@ -1,0 +1,33 @@
+{
+  "name": "daily-wage-labour-backend",
+  "version": "1.0.0",
+  "description": "Backend API server for Daily Wage Labour Attendance & Payment Platform",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:init": "node database/initDb.js",
+    "db:seed-admin": "node database/seedAdmin.js",
+    "test:auth": "node tests/authTest.js",
+    "test:sites": "node tests/siteTest.js",
+    "test:workers": "node tests/workerTest.js",
+    "test:attendance": "node tests/attendanceTest.js",
+    "test:wages": "node tests/wageTest.js",
+    "test:payments": "node tests/paymentTest.js",
+    "test:admin": "node tests/adminTest.js",
+    "test:export": "node tests/exportTest.js",
+    "test": "node tests/authTest.js && node tests/siteTest.js && node tests/workerTest.js && node tests/attendanceTest.js && node tests/wageTest.js && node tests/paymentTest.js && node tests/adminTest.js && node tests/exportTest.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
